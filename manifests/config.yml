@@ -4,8 +4,8 @@ metadata:
   name: configmap-db
 data:
   #key: "value"
-  LOG_LEVEL="debug"
-  ENVIRONMENT="production"
+  LOG_LEVEL:"debug"
+  ENVIRONMENT:"production"
 
 
 
