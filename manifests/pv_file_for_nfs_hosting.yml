@@ -1,0 +1,13 @@
+apiVersion: v1 
+kind: PersistentVolume
+metadata:
+  name: my-pv-1G
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  nfs:                                 # <--- Added NFS volume type
+    server: 192.168.1.50               # The IP address or hostname of your NFS server
+    path: "/var/nfs/kubernetes-data"   # The shared directory exported on your NFS server
